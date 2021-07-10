@@ -54,7 +54,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=5]
 resource_name = "Walk"
 length = 1.2
 loop = true
@@ -72,8 +72,8 @@ tracks/0/keys = {
 "values": [ 8, 9, 10, 11, 12, 13, 14, 15 ]
 }
 
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 5, 10 )
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 2, 10 )
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -95,7 +95,7 @@ autoplay = "Stand"
 anims/Jump = SubResource( 2 )
 anims/Run = SubResource( 3 )
 anims/Stand = SubResource( 4 )
-anims/Walk = SubResource( 6 )
+anims/Walk = SubResource( 5 )
 
 [node name="InteractCheck" type="Area2D" parent="."]
 collision_layer = 2
@@ -103,4 +103,4 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractCheck"]
 position = Vector2( 0, -10 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )

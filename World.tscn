@@ -8,7 +8,7 @@
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 64, 240 )
+position = Vector2( 190, 188 )
 z_index = 1
 
 [node name="MortonHouse" parent="." instance=ExtResource( 2 )]
