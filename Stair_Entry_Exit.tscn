@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Portal.gd" type="Script" id=1]
+[ext_resource path="res://Interact.tscn" type="PackedScene" id=3]
+
+[node name="Portal_A" type="Node2D" groups=[
+"Tunnel",
+]]
+z_index = 1
+script = ExtResource( 1 )
+
+[node name="Interactible" parent="." instance=ExtResource( 3 )]
