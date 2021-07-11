@@ -9,6 +9,7 @@ signal dad_dead
 enum dad_state {
 	IDLE,
 	ATTACK,
+	CHASE,
 	DEAD,
 }
 
@@ -38,8 +39,30 @@ func _physics_process(delta):
 			
 			if $Attack.is_colliding():
 				_state = dad_state.ATTACK
-				_animation_player.play("Attack")
-				motion.x = 0
+				continue
+			
+			if $Eyes.is_colliding():
+				_state = dad_state.CHASE
+				continue
+		
+		dad_state.CHASE:
+			if $Attack.is_colliding():
+				_state = dad_state.ATTACK
+				continue
+			
+			var x_input = $Eyes.scale.y if $Eyes.is_colliding() else 0
+			
+			motion.x = clamp(x_input * delta * TARGET_FPS * ACCELERATION, -MAX_SPEED, MAX_SPEED)
+			
+			if x_input == 0:
+				_state = dad_state.IDLE
+				continue
+		
+		dad_state.ATTACK:
+			_animation_player.play("Attack")
+			motion.x = 0
+	
+	motion = move_and_slide(motion, Vector2.UP)
 
 func _on_Hurt_area_entered(area):
 	_health -= 1
