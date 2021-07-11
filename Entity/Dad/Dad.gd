@@ -2,6 +2,8 @@ extends "res://Entity/Actor.gd"
 
 var _health = 2
 
+var _initial_pos = position
+
 signal dad_dead
 
 enum dad_state {
@@ -23,13 +25,16 @@ func _process(delta: float):
 		queue_free()
 
 func _physics_process(delta):
-	$Eyes.scale.x = -1 if _sprite.flip_h else 1
-	$Attack.scale.x = -1 if _sprite.flip_h else 1
+	$Eyes.scale.y = -1 if _sprite.flip_h else 1
+	$Attack.scale.y = -1 if _sprite.flip_h else 1
+	$Hit.scale.x = -1 if _sprite.flip_h else 1
 	
 	match _state:
 		dad_state.IDLE:
 			if motion.x == 0:
 				_animation_player.play("Stand")
+			else:
+				_animation_player.play("Walk")
 			
 			if $Attack.is_colliding():
 				_state = dad_state.ATTACK

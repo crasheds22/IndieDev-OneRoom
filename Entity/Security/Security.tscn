@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Assets/Art/underwear_dad.png" type="Texture" id=1]
-[ext_resource path="res://Entity/Dad.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Art/sec_guard_sheet.png" type="Texture" id=1]
+[ext_resource path="res://Entity/Security/Security.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2, 10 )
@@ -184,6 +184,8 @@ extents = Vector2( 6.11234, 6.5863 )
 extents = Vector2( 3.20088, 10 )
 
 [node name="UnderwearDad" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 4
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="." groups=[
@@ -193,7 +195,6 @@ position = Vector2( 1, -16 )
 texture = ExtResource( 1 )
 hframes = 8
 vframes = 5
-frame = 24
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -10 )

@@ -4,7 +4,7 @@
 [ext_resource path="res://World/Passage/Stairs/Stair_Entry_Exit.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Entity/Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/Levels/MortonHouse.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Entity/Dad.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Entity/Dad/Dad.tscn" type="PackedScene" id=5]
 
 [node name="World" type="Node2D"]
 
@@ -94,7 +94,6 @@ position = Vector2( 3.49963, 25.0005 )
 [node name="UnderwearDad" parent="." instance=ExtResource( 5 )]
 position = Vector2( 168, 240 )
 
-[editable path="Player"]
 [editable path="F1ToF2"]
 [editable path="F2ToF1"]
 [editable path="F2ToAttic"]
@@ -102,4 +101,3 @@ position = Vector2( 168, 240 )
 [editable path="F1ToBasement"]
 [editable path="BasementToF1"]
 [editable path="MeatBox"]
-[editable path="UnderwearDad"]
