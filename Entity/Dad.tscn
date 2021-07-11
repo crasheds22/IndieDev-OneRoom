@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Assets/Art/morton_sheet.png" type="Texture" id=1]
-[ext_resource path="res://Entity/Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Art/underwear_dad.png" type="Texture" id=1]
+[ext_resource path="res://Entity/Dad.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2, 10 )
@@ -177,13 +177,13 @@ tracks/1/keys = {
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 2, 10 )
 
-[sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 2.60579, 10 )
-
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 7.06029, 8.42378 )
+extents = Vector2( 6.11234, 6.5863 )
 
-[node name="Morton" type="KinematicBody2D"]
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 3.20088, 10 )
+
+[node name="UnderwearDad" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="." groups=[
@@ -216,6 +216,15 @@ collision_mask = 0
 position = Vector2( 0, -10 )
 shape = SubResource( 8 )
 
+[node name="Hit" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 0
+
+[node name="HitCollider" type="CollisionShape2D" parent="Hit"]
+position = Vector2( 14.0873, -18.0964 )
+shape = SubResource( 9 )
+disabled = true
+
 [node name="Hurt" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 8
@@ -223,15 +232,6 @@ collision_mask = 8
 [node name="HurtCollider" type="CollisionShape2D" parent="Hurt"]
 position = Vector2( 0, -9.91124 )
 shape = SubResource( 10 )
-
-[node name="Hit" type="Area2D" parent="."]
-collision_layer = 8
-collision_mask = 0
-
-[node name="HitCollider" type="CollisionShape2D" parent="Hit"]
-position = Vector2( 14.0873, -18.1521 )
-shape = SubResource( 9 )
-disabled = true
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="area_entered" from="Hurt" to="." method="_on_Hurt_area_entered"]
