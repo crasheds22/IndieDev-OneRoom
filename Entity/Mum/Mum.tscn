@@ -183,7 +183,7 @@ extents = Vector2( 6.11234, 6.5863 )
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 3.20088, 10 )
 
-[node name="UnderwearDad" type="KinematicBody2D"]
+[node name="UnderwearMum" type="KinematicBody2D"]
 collision_layer = 2
 collision_mask = 4
 script = ExtResource( 1 )
