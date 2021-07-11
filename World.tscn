@@ -12,6 +12,7 @@ position = Vector2( 190, 188 )
 z_index = 1
 
 [node name="MortonHouse" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1, 0 )
 
 [node name="F1ToF2" parent="." groups=[
 "F1toF2",

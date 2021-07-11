@@ -49,7 +49,7 @@ var userConfig = {
 	"highscore": 0,
 	"sound": true,
 	"music": true,
-	"fullscreen": false
+	"fullscreen": true
 }
 
 # RNG base
@@ -66,8 +66,8 @@ func _ready():
 	print("Soft-Debug: "+ str(DEBUG))
 	rng.randomize()
 	loadConfig()
-	videoSetup(2)
-	switchFullscreen()
+	#videoSetup(2)
+	#switchFullscreen()
 
 # Config Save
 func saveConfig():
