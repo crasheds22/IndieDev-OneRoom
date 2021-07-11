@@ -233,5 +233,17 @@ collision_mask = 8
 position = Vector2( 0, -9.91124 )
 shape = SubResource( 10 )
 
+[node name="Attack" type="RayCast2D" parent="."]
+position = Vector2( 0, -16 )
+rotation = -1.5708
+enabled = true
+cast_to = Vector2( 0, 15 )
+collide_with_areas = true
+
+[node name="Eyes" type="RayCast2D" parent="."]
+position = Vector2( 0, -16 )
+rotation = -1.5708
+enabled = true
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="area_entered" from="Hurt" to="." method="_on_Hurt_area_entered"]

@@ -34,6 +34,7 @@ func _physics_process(delta):
 			
 			if x_input != 0:
 				_sprite.flip_h = x_input < 0
+				$Hit.scale.x = -1 if _sprite.flip_h else 1
 				
 				if sprinting:
 					_animation_player.play("Run")
