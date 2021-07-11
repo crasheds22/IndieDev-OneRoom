@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://MessageBox.gd" type="Script" id=1]
+[ext_resource path="res://UI/MessageBox.gd" type="Script" id=1]
 
 [sub_resource type="DynamicFontData" id=1]
-font_path = "res://m5x7.ttf"
+font_path = "res://Assets/Font/m5x7.ttf"
 
 [sub_resource type="DynamicFont" id=2]
 font_data = SubResource( 1 )

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Portal.gd" type="Script" id=1]
-[ext_resource path="res://Interact.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Passage/Stairs/Portal.gd" type="Script" id=1]
+[ext_resource path="res://World/Interactable/Interact.tscn" type="PackedScene" id=3]
 
 [node name="Portal_A" type="Node2D" groups=[
 "Tunnel",

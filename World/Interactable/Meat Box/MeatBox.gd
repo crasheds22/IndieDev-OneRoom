@@ -4,7 +4,7 @@ var clicks: = 0
 
 var message_text = null
 
-onready var message = preload("res://MessageBox.tscn")
+onready var message = preload("res://UI/MessageBox.tscn")
 
 func _ready():
 	$Interactible.connect("on_interact", self, "some_function")

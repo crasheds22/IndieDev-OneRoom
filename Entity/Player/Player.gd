@@ -1,4 +1,4 @@
-extends "res://Actor.gd"
+extends "res://Entity/Actor.gd"
 
 onready var sprite = $Sprite
 

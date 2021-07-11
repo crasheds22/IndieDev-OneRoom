@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/morton_sheet.png-815b5d0b254783b7ebd43c4155b89a8a.stex"
+path="res://.import/house_cropped.png-159bce8da97eef2da3a1670ac6d2b7ae.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/morton_sheet.png"
-dest_files=[ "res://.import/morton_sheet.png-815b5d0b254783b7ebd43c4155b89a8a.stex" ]
+source_file="res://Assets/Art/house_cropped.png"
+dest_files=[ "res://.import/house_cropped.png-159bce8da97eef2da3a1670ac6d2b7ae.stex" ]
 
 [params]
 
